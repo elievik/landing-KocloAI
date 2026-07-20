@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-primary: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-surface-variant: #3e4a3d;
+  --color-surface-variant: #dde5d9;
+  --color-secondary-fixed: #dbe1ff;
+  --color-tertiary-container: #c05400;
+  --color-on-secondary-container: #fefcff;
+  --color-primary-fixed: #7ffc97;
+  --color-on-primary-fixed: #002109;
+  --color-secondary-container: #316bf3;
+  --color-surface-container-low: #eff6ea;
+  --color-on-tertiary-fixed-variant: #783200;
+  --color-on-tertiary: #ffffff;
+  --color-background: #f4fcf0;
+  --color-tertiary-fixed: #ffdbca;
+  --color-primary-container: #00873a;
+  --color-inverse-primary: #62df7d;
+  --color-on-tertiary-fixed: #341100;
+  --color-on-secondary-fixed-variant: #003ea8;
+  --color-outline: #6e7b6c;
+  --color-secondary-fixed-dim: #b4c5ff;
+  --color-surface-bright: #f4fcf0;
+  --color-surface-tint: #006e2d;
+  --color-surface-dim: #d5dcd1;
+  --color-on-error-container: #93000a;
+  --color-outline-variant: #bdcaba;
+  --color-surface: #f4fcf0;
+  --color-on-primary-container: #f7fff2;
+  --color-inverse-on-surface: #ecf3e7;
+  --color-tertiary-fixed-dim: #ffb690;
+  --color-primary-fixed-dim: #62df7d;
+  --color-secondary: #0051d5;
+  --color-on-primary-fixed-variant: #005320;
+  --color-surface-container-high: #e3eadf;
+  --color-surface-container-lowest: #ffffff;
+  --color-error: #ba1a1a;
+  --color-primary: #16a34a;
+  --color-tertiary: #994100;
+  --color-on-error: #ffffff;
+  --color-on-surface: #171d16;
+  --color-on-secondary-fixed: #00174b;
+  --color-inverse-surface: #2b322b;
+  --color-surface-container: #e9f0e5;
+  --color-on-background: #171d16;
+  --color-surface-container-highest: #dde5d9;
+  --color-on-tertiary-container: #fffbff;
+  --color-on-secondary: #ffffff;
+
+  --radius-2xl: 20px;
+  --radius-card: 20px;
+
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 32px;
+  --spacing-section-gap: 120px;
+  --spacing-gutter: 24px;
+  --spacing-container-padding: 24px;
+
+  --font-headline-lg: var(--font-inter), sans-serif;
+  --font-label-sm: var(--font-inter), sans-serif;
+  --font-headline-md: var(--font-inter), sans-serif;
+  --font-body-lg: var(--font-inter), sans-serif;
+  --font-display-xl: var(--font-inter), sans-serif;
+  --font-body-md: var(--font-inter), sans-serif;
+  --font-mono-label: var(--font-geist-mono), monospace;
+  --font-headline-lg-mobile: var(--font-inter), sans-serif;
+
+  --text-headline-lg: 36px;
+  --text-headline-lg--line-height: 44px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-label-sm: 14px;
+  --text-label-sm--line-height: 20px;
+  --text-label-sm--letter-spacing: 0.05em;
+  --text-label-sm--font-weight: 500;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-display-xl: 60px;
+  --text-display-xl--line-height: 72px;
+  --text-display-xl--letter-spacing: -0.02em;
+  --text-display-xl--font-weight: 800;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-mono-label: 13px;
+  --text-mono-label--line-height: 16px;
+  --text-mono-label--font-weight: 500;
+
+  --text-headline-lg-mobile: 30px;
+  --text-headline-lg-mobile--line-height: 38px;
+  --text-headline-lg-mobile--font-weight: 600;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background-color: #f8fafc;
+  color: #171d16;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.section-padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.chip {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  vertical-align: middle;
+}
