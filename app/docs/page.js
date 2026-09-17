@@ -8,62 +8,42 @@ const downloads = [
   {
     icon: "hub",
     iconBg: "bg-primary-container/10 text-primary",
-    version: "v2.4.1",
-    title: "Backend Server",
-    desc: "Core orchestration engine and database manager for poultry telemetry.",
-    size: "450MB",
-    date: "2024-10-15",
-    action: { icon: "download", label: "Download Core", filled: true },
+    version: "GITHUB",
+    title: "Backend IA Local",
+    desc: "Serveur FastAPI local pour la surveillance vidéo et le diagnostic de santé.",
+    size: "SOURCE",
+    action: { icon: "code", label: "Voir le code sur GitHub", filled: true },
+    href: "https://github.com/elievik/koclo_backend_ia",
   },
   {
     icon: "dashboard",
     iconBg: "bg-secondary-container/10 text-secondary",
-    version: "v2.4.0",
-    title: "KOCLO AI App",
-    desc: "Advanced desktop dashboard for real-time visualization and AI control.",
-    size: "1.2GB",
-    date: "2024-10-12",
-    action: { icon: "desktop_windows", label: "Get Desktop App", filled: false },
+    version: "APK",
+    title: "KOCLO AI Mobile",
+    desc: "Application mobile de surveillance vidéo en temps réel et d'alertes intelligentes.",
+    size: "APK",
+    action: { icon: "android", label: "Télécharger l'application", filled: false },
+    href: "/assets/KocloAI.apk",
   },
   {
     icon: "sensors",
     iconBg: "bg-tertiary-container/10 text-tertiary",
-    version: "v1.1.0",
-    title: "Collect_KOCLO",
-    desc: "Edge node firmware for data harvesting and initial biological preprocessing.",
-    size: "12MB",
-    date: "2024-09-30",
-    action: { icon: "memory", label: "Download Firmware", filled: true },
+    version: "APK",
+    title: "koclo_collect",
+    desc: "Application mobile de collecte d'images et de données de santé sur le terrain.",
+    size: "APK",
+    action: { icon: "android", label: "Télécharger l'application", filled: true },
+    href: "/assets/collect_koclo.apk",
   },
   {
-    icon: "psychology",
-    iconBg: "bg-primary-container/10 text-primary",
-    version: "v3.0.x",
-    title: "AI Models (Base)",
-    desc: "Pre-trained weights for bird health detection and behavioral analysis.",
-    size: "3.4GB",
-    date: "2024-11-01",
-    action: { icon: "model_training", label: "Download Weights", filled: false },
-  },
-  {
-    icon: "code",
-    iconBg: "bg-secondary-container/10 text-secondary",
-    version: "v0.8-beta",
-    title: "API / SDK",
-    desc: "Client libraries for Python, Node.js, and C++ for custom integrations.",
-    size: "85MB",
-    date: "2024-10-20",
-    action: { icon: "terminal", label: "Access SDK", filled: true },
-  },
-  {
-    icon: "auto_stories",
-    iconBg: "bg-tertiary-container/10 text-tertiary",
-    version: "LATEST",
-    title: "Documentation",
-    desc: "Complete PDF bundle of technical guides and user manuals for offline use.",
-    size: "48MB",
-    date: "2024-11-05",
-    action: { icon: "picture_as_pdf", label: "Download PDFs", filled: false },
+    icon: "memory",
+    iconBg: "bg-orange-500/10 text-orange-500",
+    version: "INO",
+    title: "Firmware ESP32-CAM",
+    desc: "Code source Arduino pour les caméras de surveillance du poulailler.",
+    size: "INO",
+    action: { icon: "code", label: "Télécharger le firmware", filled: false },
+    href: "/assets/esp32_cam_client.ino",
   },
 ];
 
@@ -170,13 +150,13 @@ export default function DocsPage() {
                     <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">calendar_today</span> {item.date}</span>
                   </div>
                   {item.action.filled ? (
-                    <button className="w-full bg-primary text-on-primary py-4 rounded-full font-bold flex items-center justify-center gap-2 group-hover:scale-[0.98] transition-transform">
+                    <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined} download={!item.href.startsWith("http")} className="w-full bg-primary text-on-primary py-4 rounded-full font-bold flex items-center justify-center gap-2 group-hover:scale-[0.98] transition-transform">
                       <span className="material-symbols-outlined">{item.action.icon}</span> {item.action.label}
-                    </button>
+                    </a>
                   ) : (
-                    <button className="w-full border-2 border-primary text-primary py-4 rounded-full font-bold flex items-center justify-center gap-2 group-hover:bg-primary/5 transition-colors">
+                    <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined} download={!item.href.startsWith("http")} className="w-full border-2 border-primary text-primary py-4 rounded-full font-bold flex items-center justify-center gap-2 group-hover:bg-primary/5 transition-colors">
                       <span className="material-symbols-outlined">{item.action.icon}</span> {item.action.label}
-                    </button>
+                    </a>
                   )}
                 </div>
               ))}

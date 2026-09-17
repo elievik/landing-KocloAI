@@ -68,7 +68,7 @@ export default function Home() {
             <div className="glass-card p-4 overflow-hidden border-none shadow-2xl">
               <img
                 className="w-full rounded-2xl shadow-sm"
-                alt="Illustration 3D d'une ferme avicole moderne : caméra ESP32 fixée au mur surveillant les poules, avec une interface smartphone affichant la détection YOLOv8 et le diagnostic santé EfficientNetB0."
+                alt="Illustration 3D d'une ferme avicole moderne : caméra ESP32 fixée au mur surveillant les poules, avec une interface smartphone affichant la détection YOLOv11et le diagnostic santé EfficientNetB0."
                 src="/images/hero_poultry.png"
               />
             </div>
@@ -96,7 +96,7 @@ export default function Home() {
               <div className="glass-card p-stack-lg text-center hover:translate-y-[-8px] transition-transform duration-300">
                 <span className="material-symbols-outlined text-5xl text-tertiary-container mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>neurology</span>
                 <h3 className="text-headline-md mb-2">IA State-art</h3>
-                <p className="text-on-surface-variant">YOLOv8 (surveillance vidéo) + EfficientNetB0 (diagnostic scan).</p>
+                <p className="text-on-surface-variant">YOLOv11(surveillance vidéo) + EfficientNetB0 (diagnostic scan).</p>
               </div>
               <div className="glass-card p-stack-lg text-center hover:translate-y-[-8px] transition-transform duration-300">
                 <span className="material-symbols-outlined text-5xl text-primary mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>devices</span>
@@ -142,8 +142,7 @@ export default function Home() {
                     <li className="flex items-center gap-2 text-xs font-medium"><span className="material-symbols-outlined text-primary text-sm">check_circle</span> Mode 100% hors ligne</li>
                   </ul>
                   <div className="flex gap-2 pt-2">
-                    <a href="/downloads/koclo_ai.apk" className="flex-1 bg-primary/10 text-primary text-center py-1.5 rounded-lg text-xs font-bold hover:bg-primary hover:text-white transition-colors">APK</a>
-                    <a href="/downloads/koclo_ai.ipa" className="flex-1 bg-primary/10 text-primary text-center py-1.5 rounded-lg text-xs font-bold hover:bg-primary hover:text-white transition-colors">IPA</a>
+                    <a href="/assets/KocloAI.apk" download className="flex-1 bg-primary/10 text-primary text-center py-1.5 rounded-lg text-xs font-bold hover:bg-primary hover:text-white transition-colors">APK</a>
                   </div>
                 </div>
               </div>
@@ -162,8 +161,7 @@ export default function Home() {
                     <li className="flex items-center gap-2 text-xs font-medium"><span className="material-symbols-outlined text-secondary text-sm">check_circle</span> Synchronisation FastAPI</li>
                   </ul>
                   <div className="flex gap-2 pt-2">
-                    <a href="/downloads/koclo_collect.apk" className="flex-1 bg-secondary/10 text-secondary text-center py-1.5 rounded-lg text-xs font-bold hover:bg-secondary hover:text-white transition-colors">APK</a>
-                    <a href="/downloads/koclo_collect.ipa" className="flex-1 bg-secondary/10 text-secondary text-center py-1.5 rounded-lg text-xs font-bold hover:bg-secondary hover:text-white transition-colors">IPA</a>
+                    <a href="/assets/collect_koclo.apk" download className="flex-1 bg-secondary/10 text-secondary text-center py-1.5 rounded-lg text-xs font-bold hover:bg-secondary hover:text-white transition-colors">APK</a>
                   </div>
                 </div>
               </div>
@@ -179,14 +177,14 @@ export default function Home() {
                 </div>
                 <div className="p-6 space-y-3 flex-1 flex flex-col">
                   <h3 className="text-headline-md">Koclo Backend IA</h3>
-                  <p className="text-on-surface-variant text-sm flex-1">Serveur FastAPI Python embarquant YOLOv8 (surveillance vidéo) et EfficientNetB0 (diagnostic santé par photo). Tourne en local sur un PC ou Raspberry Pi.</p>
+                  <p className="text-on-surface-variant text-sm flex-1">Serveur FastAPI Python embarquant YOLOv11(surveillance vidéo) et EfficientNetB0 (diagnostic santé par photo). Tourne en local sur un PC ou Raspberry Pi.</p>
                   <ul className="space-y-1">
-                    <li className="flex items-center gap-2 text-xs font-medium"><span className="material-symbols-outlined text-[#00D084] text-sm">check_circle</span> Inférence YOLOv8 locale</li>
+                    <li className="flex items-center gap-2 text-xs font-medium"><span className="material-symbols-outlined text-[#00D084] text-sm">check_circle</span> Inférence YOLOv11locale</li>
                     <li className="flex items-center gap-2 text-xs font-medium"><span className="material-symbols-outlined text-[#00D084] text-sm">check_circle</span> WebSocket temps réel</li>
                     <li className="flex items-center gap-2 text-xs font-medium"><span className="material-symbols-outlined text-[#00D084] text-sm">check_circle</span> Zéro dépendance cloud</li>
                   </ul>
-                  <a href="/downloads/koclo_backend_ai.zip" className="w-full bg-[#003822]/10 text-[#003822] text-center py-1.5 rounded-lg text-xs font-bold hover:bg-[#003822] hover:text-white transition-colors flex items-center justify-center gap-1 mt-2">
-                    <span className="material-symbols-outlined text-sm">folder_zip</span> Télécharger le code (ZIP)
+                  <a href="https://github.com/elievik/koclo_backend_ia" target="_blank" rel="noopener noreferrer" className="w-full bg-[#003822]/10 text-[#003822] text-center py-1.5 rounded-lg text-xs font-bold hover:bg-[#003822] hover:text-white transition-colors flex items-center justify-center gap-1 mt-2">
+                    <span className="material-symbols-outlined text-sm">code</span> Voir le code sur GitHub
                   </a>
                 </div>
               </div>
@@ -204,7 +202,7 @@ export default function Home() {
                     <li className="flex items-center gap-2 text-xs font-medium"><span className="material-symbols-outlined text-blue-600 text-sm">check_circle</span> Visualisation analytique</li>
                     <li className="flex items-center gap-2 text-xs font-medium"><span className="material-symbols-outlined text-blue-600 text-sm">check_circle</span> Accessible sur internet</li>
                   </ul>
-                  <a href="https://admin.koclo.ai" target="_blank" rel="noopener noreferrer" className="w-full bg-blue-600 text-white text-center py-1.5 rounded-lg text-xs font-bold hover:bg-blue-700 transition-colors flex items-center justify-center gap-1 mt-2">
+                  <a href="https://huggingface.co/spaces/vikoumkoudzo/admin-collect" target="_blank" rel="noopener noreferrer" className="w-full bg-blue-600 text-white text-center py-1.5 rounded-lg text-xs font-bold hover:bg-blue-700 transition-colors flex items-center justify-center gap-1 mt-2">
                     Accéder au Dashboard <span className="material-symbols-outlined text-sm">open_in_new</span>
                   </a>
                 </div>
@@ -259,7 +257,7 @@ export default function Home() {
                     </div>
                   </div>
                   <span className="text-xs font-bold text-[#00D084]">koclo_backend_ia</span>
-                  <span className="text-xs text-on-surface-variant">FastAPI · Port :8000 · YOLOv8 + EfficientNetB0</span>
+                  <span className="text-xs text-on-surface-variant">FastAPI · Port :8000 · YOLOv11+ EfficientNetB0</span>
                 </div>
               </div>
               {/* Arrow bidirectional */}
@@ -277,7 +275,7 @@ export default function Home() {
                 <div className="flex flex-col items-center gap-3">
                   <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Koclo AI Mobile · Flutter (iOS / Android)</span>
                   <div className="flex gap-6">
-                    {/* Screen 1: Surveillance — YOLOv8 */}
+                    {/* Screen 1: Surveillance — YOLOv11*/}
                     <div className="flex flex-col items-center gap-2">
                       <div className="w-24 h-28 bg-primary/10 border-2 border-primary rounded-2xl flex flex-col items-center justify-center gap-1 px-2">
                         <span className="material-symbols-outlined text-primary text-3xl">videocam</span>
@@ -398,7 +396,7 @@ export default function Home() {
                   <span className="text-sm font-mono text-primary bg-primary/10 px-3 py-1 rounded">Object Detection</span>
                   <span className="material-symbols-outlined text-primary text-4xl">select_check_box</span>
                 </div>
-                <h3 className="text-headline-md mb-4">YOLOv8 Engine</h3>
+                <h3 className="text-headline-md mb-4">YOLOv11Engine</h3>
                 <p className="text-on-surface-variant mb-6">Implémentation temps réel pour la détection précise des volailles, des intrus et des anomalies de comportement dans des environnements denses.</p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-surface p-3 rounded-xl text-xs font-bold text-center">98.5% Accuracy</div>
@@ -535,11 +533,8 @@ export default function Home() {
                   <p className="text-body-sm text-on-surface-variant mb-6">Application principale de surveillance vidéo en temps réel et alertes intelligentes.</p>
                 </div>
                 <div className="flex gap-2">
-                  <a href="/downloads/koclo_ai.apk" className="flex-1 bg-surface-container hover:bg-primary hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
+                  <a href="/assets/KocloAI.apk" download className="flex-1 bg-surface-container hover:bg-primary hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
                     <span className="material-symbols-outlined text-sm">android</span> APK
-                  </a>
-                  <a href="/downloads/koclo_ai.ipa" className="flex-1 bg-surface-container hover:bg-primary hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
-                    <span className="material-symbols-outlined text-sm">phone_iphone</span> IPA
                   </a>
                 </div>
               </div>
@@ -556,11 +551,8 @@ export default function Home() {
                   <p className="text-body-sm text-on-surface-variant mb-6">Application dédiée à la collecte d'images et données de santé sur le terrain.</p>
                 </div>
                 <div className="flex gap-2">
-                  <a href="/downloads/koclo_collect.apk" className="flex-1 bg-surface-container hover:bg-secondary hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
+                  <a href="/assets/collect_koclo.apk" download className="flex-1 bg-surface-container hover:bg-secondary hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
                     <span className="material-symbols-outlined text-sm">android</span> APK
-                  </a>
-                  <a href="/downloads/koclo_collect.ipa" className="flex-1 bg-surface-container hover:bg-secondary hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
-                    <span className="material-symbols-outlined text-sm">phone_iphone</span> IPA
                   </a>
                 </div>
               </div>
@@ -574,10 +566,10 @@ export default function Home() {
                     </div>
                     <h3 className="text-title-lg font-bold">Backend IA Local</h3>
                   </div>
-                  <p className="text-body-sm text-on-surface-variant mb-6">Serveur FastAPI embarquant YOLOv8 (surveillance) et EfficientNetB0 (diagnostic santé par photo) pour le traitement entièrement local.</p>
+                  <p className="text-body-sm text-on-surface-variant mb-6">Serveur FastAPI embarquant YOLOv11(surveillance) et EfficientNetB0 (diagnostic santé par photo) pour le traitement entièrement local.</p>
                 </div>
-                <a href="/downloads/koclo_backend_ai.zip" className="w-full bg-surface-container hover:bg-tertiary hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
-                  <span className="material-symbols-outlined text-sm">folder_zip</span> Source (ZIP)
+                <a href="https://github.com/elievik/koclo_backend_ia" target="_blank" rel="noopener noreferrer" className="w-full bg-surface-container hover:bg-tertiary hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
+                  <span className="material-symbols-outlined text-sm">code</span> Voir le code sur GitHub
                 </a>
               </div>
 
@@ -592,8 +584,8 @@ export default function Home() {
                   </div>
                   <p className="text-body-sm text-on-surface-variant mb-6">Code source C++ (Arduino) pour les caméras de surveillance du poulailler.</p>
                 </div>
-                <a href="/downloads/esp32_cam_firmware.zip" className="w-full bg-surface-container hover:bg-orange-500 hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
-                  <span className="material-symbols-outlined text-sm">code</span> Firmware (ZIP)
+                <a href="/assets/esp32_cam_client.ino" download className="w-full bg-surface-container hover:bg-orange-500 hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2">
+                  <span className="material-symbols-outlined text-sm">code</span> Firmware (.ino)
                 </a>
               </div>
 
