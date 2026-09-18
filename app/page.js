@@ -600,7 +600,7 @@ export default function Home() {
                   </div>
                   <p className="text-body-sm text-on-surface-variant mb-6">Interface d'administration Web pour la gestion globale des datasets et des utilisateurs de la ferme.</p>
                 </div>
-                <a href="https://admin.koclo.ai" target="_blank" rel="noopener noreferrer" className="w-full bg-blue-600 text-white hover:bg-blue-700 transition-colors text-center py-3 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
+                <a href="https://huggingface.co/spaces/vikoumkoudzo/admin-collect" target="_blank" rel="noopener noreferrer" className="w-full bg-blue-600 text-white hover:bg-blue-700 transition-colors text-center py-3 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
                   Accéder au Dashboard Web <span className="material-symbols-outlined text-sm">open_in_new</span>
                 </a>
               </div>
