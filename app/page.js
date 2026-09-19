@@ -69,7 +69,7 @@ export default function Home() {
               <img
                 className="w-full rounded-2xl shadow-sm"
                 alt="Illustration 3D d'une ferme avicole moderne : caméra ESP32 fixée au mur surveillant les poules, avec une interface smartphone affichant la détection YOLOv11et le diagnostic santé EfficientNetB0."
-                src="/images/hero_poultry.png"
+                src="/images/hero_poultry.JPG"
               />
             </div>
           </div>
